@@ -1,0 +1,38 @@
+
+{% extends 'base.html' %}
+
+{% block title %}Engineering{% endblock title %}
+
+{% block body %}
+<form method="post" action="/contact">
+  {% csrf_token %}
+
+    <div class="mb-3">
+      <label for="exampleTextInput" class="form-label">S.no</label>
+      <input type="text" id="exampleTextInput" class="form-control" placeholder="S.No" name="sno">
+    </div>
+
+    
+    <div class="mb-3">
+      <label for="exampleTextInput" class="form-label">L2 identifier code</label>
+      <input type="text" id="exampleTextInput" class="form-control" placeholder="L2 Identifier Code" name="l2">
+    </div>
+
+    <div class="mb-3">
+      <label for="exampleTextInput" class="form-label">L2 identifier code</label>
+      <input type="text" id="exampleTextInput" class="form-control" placeholder="task" name="task">
+    </div>
+    <div class="mb-3">
+      <label for="exampleTextInput" class="form-label">Start</label>
+      <input type="text" id="exampleTextInput" class="form-control" placeholder="L2 Identifier Code" name="start">
+    </div>
+
+    <div class="mb-3">
+      <label for="exampleTextInput" class="form-label">Start</label>
+      <input type="text" id="exampleTextInput" class="form-control" placeholder="L2 Identifier Code" name="finish">
+    </div>
+ 
+    <button type="submit" class="btn btn-primary" name="submit">Submit</button>
+  </form>
+  {% endblock body %}
+
